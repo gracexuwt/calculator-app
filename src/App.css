@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    font-family: 'Lato';
+    font-size: 18px;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+}
+
+/* CALCULATOR */
+.wrapper{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    margin: 0 auto;
+    width: 300px;
+    text-align:center;
+    border: 10px solid #101116;
+    background:#101116;
+    border-radius: 5px;
+}
+
+.keypad{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(70px, auto);
+}
+
+input[type="text"]{
+    text-align: right;
+    font-size: 25px;
+    font-weight: 450;
+    letter-spacing: 1px;
+    height: 75px;
+    width: 249px;
+    background-color: #101116;
+    border: 0px;
+    color: #ffffff;
+}
+
+/* Clear button takes up two spaces */
+#clear{
+    grid-column: 1/3;
+    grid-row: 1;
+    color:#ffffff;
+}
+
+/* Equal button takes up two spaces */
+#result{
+    grid-column: 3/5;
+    grid-row: 5;
+    color:#ffffff;
+}
+
+#back{
+    color:#ffffff;
+}
+
+button{
+    background: #3e4257;
+    color:#ffffff;
+    margin:5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 450;
+}
+
+.highlight{
+    background: #a3ade0;
+}
